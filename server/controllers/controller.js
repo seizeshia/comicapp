@@ -12,7 +12,7 @@ var salt = bcrypt.genSaltSync(10);
    },
   
    login: (request,response)=>{
-     if(request.body.token == "ay8c8ooVXrodbO2Jke1F0J7kl.Oju42924tX"){
+     if(request.body.token == "token"){
      console.log("right huuuuuuuuuuuuuuur",request.body);
     //  Users.findOne(username: request.body.username)
     //  .then(user) => {
@@ -50,7 +50,7 @@ var salt = bcrypt.genSaltSync(10);
     }
    },
    register: (request, response)=>{
-     if(request.body.token == "ay8c8ooVXrodbO2Jke1F0J7kl.Oju42924tX"){
+     if(request.body.token == "token"){
      console.log("here I am Mister!!!!!!!!!!!!")
      console.log(request.body.password.length)
      if(request.body.username.length < 5){
@@ -96,7 +96,7 @@ var salt = bcrypt.genSaltSync(10);
     }
    },
    checker:(request, response)=>{
-    if(request.body.token == "ay8c8ooVXrodbO2Jke1F0J7kl.Oju42924tX"){
+    if(request.body.token == "token"){
     //  console.log("pooooooooooooooooop", request.body)
      Users.find({}, function(err,user){
        response.json(user)
